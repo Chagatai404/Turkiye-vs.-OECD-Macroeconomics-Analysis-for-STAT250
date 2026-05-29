@@ -9,7 +9,7 @@ Our project analyzes quarterly macroeconomic indicators for selected OECD countr
 - `src/`: contains modules for loading, cleaning, features, testing, regression, EDA, and plotting 
 - `scripts/01_build_dataset.py`: builds the processed datasets
 - `stat250_project.py`: runs EDA, hypothesis tests, ANOVA, regression, and output generation through the main function in `src/analysis.py`
-- `scripts/02_run_analysis(main).py`: compatibility wrapper for the analysis script (practically same with `stat250_project.py`)
+- `scripts/02_run_analysis.py`: compatibility wrapper for the analysis script (practically same with `stat250_project.py`)
 - `outputs/figures/`: contains saved PNG figures
 - `outputs/tables/`: contains saved CSV and TXT tables
 
