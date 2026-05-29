@@ -1,4 +1,4 @@
-# STAT 250 OECD Macroeconomic Indicators Project
+# STAT 250 Turkiye vs. OECD Macroeconomic Indicators Analysis 
 
 Our project analyzes quarterly macroeconomic indicators for selected OECD countries, with a focus on Turkiye. Monthly CPI, IPI, unemployment, and CCI data are aggregated to quarterly means, then merged with quarterly GDP growth.
 
