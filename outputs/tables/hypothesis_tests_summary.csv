@@ -1,0 +1,6 @@
+rq,test,n,mean,reference,statistic,p_value,ci_low,ci_high,decision,levene_statistic,levene_p_value,n_turkiye,n_other_oecd,mean_turkiye,mean_other_oecd,high_inflation_quarters,sample_proportion,proportion_turkiye,proportion_other_oecd,classic_f,classic_p_value,welch_f,welch_df1,welch_df2,welch_p_value
+RQ1,One-sample t-test,84.0,10.346825396825395,6.5,21.859322469946278,3.4692363598912155e-36,9.996806268549053,10.696844525101737,Reject H0,,,,,,,,,,,,,,,,
+RQ2,Student t-test,,,,2.176659043945323,0.03578824782927834,,,Reject H0,0.03529831520200444,0.8519716097029102,4.0,36.0,114.41513083333334,99.38328009259259,,,,,,,,,,
+RQ3,One-sample proportion z-test,83.0,,0.5,-1.218152206850348,0.8884169311354453,,,Fail to reject H0,,,,,,,36.0,0.43373493975903615,,,,,,,,
+RQ4,Two-sample proportion z-test,,,,16.064734317319463,4.507917290691914e-58,,,Reject H0,,,83.0,724.0,,,,,0.43373493975903615,0.011049723756906077,,,,,,
+RQ5,Welch ANOVA,,,,3.8641156324534216,0.011278380006362613,,,Reject H0,3.784225313944317,0.010299206673755059,,,,,,,,,3.2393125555104683,0.02162696693848643,3.8641156324534216,3.0,113.14067438926554,0.011278380006362613
