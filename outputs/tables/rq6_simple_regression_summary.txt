@@ -3,8 +3,8 @@
 Dep. Variable:                  unemp   R-squared:                       0.045
 Model:                            OLS   Adj. R-squared:                  0.033
 Method:                 Least Squares   F-statistic:                    0.9843
-Date:                Mon, 01 Jun 2026   Prob (F-statistic):              0.324
-Time:                        16:58:55   Log-Likelihood:                -150.80
+Date:                Fri, 29 May 2026   Prob (F-statistic):              0.324
+Time:                        19:22:10   Log-Likelihood:                -150.80
 No. Observations:                  80   AIC:                             305.6
 Df Residuals:                      78   BIC:                             310.4
 Df Model:                           1                                         

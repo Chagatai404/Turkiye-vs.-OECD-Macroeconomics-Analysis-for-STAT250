@@ -9,7 +9,6 @@ from .features import add_analysis_features, make_regression_data
 from .hypothesis_tests import run_all_hypothesis_tests
 from .load_data import load_raw_datasets
 from .plots import save_core_figures
-from .methods_outputs import save_methods_outputs
 from .regression import fit_turkiye_regressions
 from .utils import ensure_directories, ensure_quarter_period, save_table
 
@@ -85,8 +84,6 @@ def main() -> None:
     for name, table in descriptive_tables(panel).items():
         save_table(table, TABLES_DIR / f"{name}.csv")
 
-    methods_outputs = save_methods_outputs(panel, TABLES_DIR, FIGURES_DIR)
-
     hypothesis_summary, supporting_tables = run_all_hypothesis_tests(panel)
     save_table(hypothesis_summary, TABLES_DIR / "hypothesis_tests_summary.csv")
     for name, table in supporting_tables.items():
@@ -116,6 +113,4 @@ def main() -> None:
     print(f"Regression data: {REGRESSION_PATH}")
     print(f"Tables: {TABLES_DIR}")
     print(f"Figures: {FIGURES_DIR}")
-    print(f"Methods tables added: {len(methods_outputs['tables'])}")
-    print(f"Methods figures added: {len(methods_outputs['figures'])}")
     print("Analysis complete.")
