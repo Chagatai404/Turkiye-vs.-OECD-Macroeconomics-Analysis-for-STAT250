@@ -1,7 +1,0 @@
-rq,question_short,response,method,main_assumptions_checked,fallback_or_note
-RQ1,Is Turkiye's mean unemployment different from 6.5%?,unemp,One-sample t-test,continuous response; large-sample robustness; independence discussed,"Interpret as benchmark comparison, not causal evidence"
-RQ2,Did Turkiye's COVID-period mean IPI differ from other OECD countries?,ipi,Two-sample t-test / Welch t-test,normality; equality of variances with Levene test; independent groups,Use Welch version if variances are unequal
-RQ3,Was Turkiye's high-inflation quarter ratio greater than 50%?,high_inflation,One-sample proportion z-test,binary outcome; adequate success/failure counts,High inflation is defined as cpi_qoq > 3%
-RQ4,Did Turkiye's high-inflation ratio differ from other OECD countries?,high_inflation,Two-sample proportion z-test,binary outcome; adequate counts in both groups,Repeated country-quarter observations make independence approximate
-RQ5,Do unemployment rates differ across macroeconomic periods?,unemp,One-way ANOVA / Welch ANOVA with post-hoc comparisons,normality; variance equality with Levene test,Use Games-Howell after Welch ANOVA when variances are unequal
-RQ6,Which variables are associated with Turkiye's unemployment?,unemp,Simple and multiple OLS regression,linearity; residual normality; heteroskedasticity; autocorrelation,Use HAC/Newey-West standard errors; interpret as association only

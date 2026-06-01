@@ -26,9 +26,7 @@ def _quarter_to_timestamp(series: pd.Series) -> pd.Series:
 
 
 def build_methods_tables(panel: pd.DataFrame) -> dict[str, pd.DataFrame]:
-    """
-    Return report-ready tables for the Methods section.
-    """
+    """Return report-ready tables for the Methods section."""
     panel = panel.copy()
 
     overview = pd.DataFrame(
@@ -169,9 +167,7 @@ def build_methods_tables(panel: pd.DataFrame) -> dict[str, pd.DataFrame]:
 
 
 def plot_observation_coverage(panel: pd.DataFrame, path: Path) -> None:
-    """
-    Save a bar chart of available observations by country.
-    """
+    """Save a bar chart of available observations by country."""
     coverage = (
         panel.groupby(["country", "country_name"], observed=True)
         .size()
@@ -192,9 +188,7 @@ def plot_observation_coverage(panel: pd.DataFrame, path: Path) -> None:
 
 
 def plot_missingness(panel: pd.DataFrame, path: Path) -> None:
-    """
-    Save a compact missingness bar chart for analysis variables.
-    """
+    """Save a compact missingness bar chart for analysis variables."""
     miss = panel[MAIN_VARIABLES + DERIVED_VARIABLES].isna().sum().sort_values(ascending=False)
     fig, ax = plt.subplots(figsize=(8, 4.8))
     ax.bar(miss.index, miss.values)
@@ -209,9 +203,7 @@ def plot_missingness(panel: pd.DataFrame, path: Path) -> None:
 
 
 def plot_period_timeline(panel: pd.DataFrame, path: Path) -> None:
-    """
-    Save a timeline showing the macroeconomic period coding used in ANOVA.
-    """
+    """Save a timeline showing the macroeconomic period coding used in ANOVA."""
     quarters = pd.Series(sorted(panel["quarter"].unique()))
     timeline = pd.DataFrame({"quarter": quarters})
     # Each quarter has the same period rule, so take the first match from panel.
@@ -235,9 +227,7 @@ def plot_period_timeline(panel: pd.DataFrame, path: Path) -> None:
 
 
 def plot_analysis_flowchart(path: Path) -> None:
-    """
-    Save a simple flowchart of the data-to-analysis workflow.
-    """
+    """Save a simple flowchart of the data-to-analysis workflow."""
     steps = [
         "Raw OECD\nindicator files",
         "Quarterly\naggregation",
@@ -277,9 +267,7 @@ def plot_analysis_flowchart(path: Path) -> None:
 
 
 def save_methods_outputs(panel: pd.DataFrame, tables_dir: Path, figures_dir: Path) -> dict[str, list[Path]]:
-    """
-    Save all Methods-section tables and figures; return written paths.
-    """
+    """Save all Methods-section tables and figures; return written paths."""
     written_tables: list[Path] = []
     for name, table in build_methods_tables(panel).items():
         out = tables_dir / f"{name}.csv"
@@ -297,4 +285,29 @@ def save_methods_outputs(panel: pd.DataFrame, tables_dir: Path, figures_dir: Pat
     plot_period_timeline(panel, figure_paths[2])
     plot_analysis_flowchart(figure_paths[3])
 
-    return {"tables": written_tables, "figures": figure_paths}
+    # A short plain-text guide saved with outputs so group members know what to use.
+    guide = textwrap.dedent(
+        """
+        Methods-section output guide
+        ============================
+
+        Recommended tables for the report:
+        1. methods_dataset_overview.csv: compact table for data source, unit, period, sample size, and variable classes.
+        2. methods_variable_dictionary.csv: use a shortened version if page space allows; otherwise move to appendix or omit.
+        3. methods_analysis_plan.csv: best Methods table because it connects each research question to the required STAT250 method and assumption checks.
+        4. methods_period_coding.csv: useful if the ANOVA period labels need clarification.
+        5. methods_missingness_summary.csv and methods_country_coverage.csv: keep as support tables; include only if missingness/coverage is discussed.
+
+        Recommended figures for the report:
+        1. methods_analysis_flowchart.png: optional, useful at the beginning of Methods if there is space.
+        2. methods_period_timeline.png: useful before the ANOVA description.
+        3. methods_observation_coverage_by_country.png: include only if you want to justify the sample structure.
+        4. methods_missingness_by_variable.png: usually omit from the main report unless missingness is important.
+
+        The report should not include Python code. Submit code separately as required by STAT250.
+        """
+    ).strip()
+    guide_path = tables_dir / "methods_output_guide.txt"
+    guide_path.write_text(guide, encoding="utf-8")
+
+    return {"tables": written_tables + [guide_path], "figures": figure_paths}
