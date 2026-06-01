@@ -1,0 +1,10 @@
+item,value
+Observation unit,Country-quarter
+Countries included,10
+Total observations,817
+Date range,2005Q1 to 2025Q4
+Main continuous variables,"unemp, cpi, ipi, cci, gdp_growth"
+Main categorical/discrete variables,"country, group, year, quarter_num, period, high_inflation"
+High-inflation rule,1 if quarter-over-quarter CPI growth is greater than 3%; 0 otherwise
+Turkiye observations,84
+Other OECD comparison observations,733

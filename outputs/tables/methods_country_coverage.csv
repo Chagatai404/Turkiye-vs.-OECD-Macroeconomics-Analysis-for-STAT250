@@ -1,0 +1,11 @@
+country,country_name,first_quarter,last_quarter,observations,missing_unemp,missing_cpi,missing_ipi,missing_cci,missing_gdp_growth
+DEU,Germany,2005Q1,2025Q4,84,0,0,0,0,0
+FRA,France,2005Q1,2025Q4,84,0,0,0,0,0
+GBR,United Kingdom,2005Q1,2025Q4,84,0,0,0,0,0
+ITA,Italy,2005Q1,2025Q4,84,0,0,0,0,0
+JPN,Japan,2005Q1,2021Q2,66,0,0,0,0,0
+KOR,South Korea,2005Q1,2025Q4,84,0,0,0,0,0
+MEX,Mexico,2005Q1,2024Q3,79,0,0,0,0,0
+POL,Poland,2005Q1,2025Q4,84,0,0,0,0,0
+TUR,Turkiye,2005Q1,2025Q4,84,0,0,0,0,0
+USA,United States,2005Q1,2025Q4,84,0,0,0,0,0
