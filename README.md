@@ -12,6 +12,8 @@ Our project analyzes quarterly macroeconomic indicators for selected OECD countr
 - `scripts/02_run_analysis(main).py`: compatibility wrapper for the analysis script (practically same with `stat250_project.py`)
 - `outputs/figures/`: contains saved PNG figures
 - `outputs/tables/`: contains saved CSV and TXT tables
+- `outputs/tables/methods_*.csv`: contains Methods-section tables documenting data structure, variables, missingness, period coding, and the research-question analysis plan
+- `outputs/figures/methods_*.png`: contains Methods-section figures for workflow, coverage, missingness, and period coding
 
 ## How To Run
 
@@ -42,7 +44,7 @@ The first script creates:
 - `data/processed/clean_oecd_quarterly_panel.csv`
 - `data/processed/clean_oecd_regression_data.csv`
 
-The analysis script saves report-ready figures and tables under `outputs/`.
+The analysis script saves report-ready figures and tables under `outputs/`, including Methods-section outputs named `methods_*.csv` and `methods_*.png`.
 
 ## Research Questions
 
