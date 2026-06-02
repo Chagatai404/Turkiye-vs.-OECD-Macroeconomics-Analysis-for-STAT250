@@ -18,7 +18,7 @@ def _first_available_value(row: pd.Series, columns: tuple[str, ...]) -> float:
             return row[column]
     raise KeyError(f"None of the expected columns were found: {columns}")
 
-def run_rq1_turkiye_unemployment(panel: pd.DataFrame, reference: float = 6.5) -> dict:
+def run_rq1_turkiye_unemployment(panel: pd.DataFrame, reference: float = 5.83) -> dict:
     """
     RQ1: one-sample t-test for Turkiye's average unemployment.
     """

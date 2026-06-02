@@ -38,7 +38,7 @@ def _load_or_build_panel() -> pd.DataFrame:
 def _print_research_questions() -> None:
     print("Research Questions")
     print("=" * 72)
-    print("RQ1: Is Turkiye's average unemployment rate over 2005-2025 significantly different from 6.5%?")
+    print("RQ1: Is Türkiye’s average unemployment rate over 2005–2025 significantly different from the other 9 OECD country’s average (μ₀ ≈ 5.83)?")
     print("RQ2: During COVID-19, did Turkiye's average IPI differ from the other OECD comparison countries?")
     print("RQ3: Did Turkiye experience high inflation in more than half of observed quarters?")
     print("RQ4: Is Turkiye's high-inflation quarter ratio different from the other OECD comparison countries?")
