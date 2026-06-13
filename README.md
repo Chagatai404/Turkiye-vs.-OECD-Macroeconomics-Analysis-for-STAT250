@@ -46,7 +46,7 @@ The analysis script saves report-ready figures and tables under `outputs/`.
 
 ## Research Questions
 
-1. Is Türkiye’s average unemployment rate over 2005–2025 significantly different from the other 9 OECD country’s average (μ₀ ≈ 5.83)?
+1. Is Türkiye’s average unemployment rate over 2005–2025 significantly different from the other 9 OECD country’s average (μ₀ ≈ 6.5)?
 2. During COVID-19, did Turkiye's average Industrial Production Index differ from the average of the other OECD comparison countries?
 3. Did Turkiye experience high inflation in more than half of observed quarters, where high inflation is quarterly CPI growth greater than 3%?
 4. Is Turkiye's high-inflation quarter ratio significantly different from the ratio for the other OECD comparison countries?
